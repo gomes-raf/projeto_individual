@@ -1,2 +1,2 @@
-# projeto_individual
+# Projeto Individual
 Sistema de reserva de salas para agendamentos.
