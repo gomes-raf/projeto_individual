@@ -24,10 +24,52 @@ Visando à uma maior autonomia dos alunos no processo de reserva de salas de est
 
 ### 2.1. Personas 
 
+A seguir é adicionado as personas do projeto, o primeiro deles sendo um aluno do Inteli que usará o sistema.
 
+<div align="center">
+<sub> Persona 1 - João </sub>
+<br>
+<br>
+<img src="../assets/Persona.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
 
 ### 2.2. User Stories 
 
+A seguir é adicionada as User Stories referente as personas.
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/US01.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/US02.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/US03.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
 
 ---
 
