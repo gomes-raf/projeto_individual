@@ -16,7 +16,7 @@
 
 ## <a name="c1"></a>1. Introdução 
 
-Visando à uma maior autonomia dos alunos no processo de reserva de salas de estudos no Inteli, que muitas das vezes tem que ser realizado pessoalmente direto com a secretaria, que a Aplicação Web foi desenvolvida, levando em conta algumas limitações e funcionalidades: cada usuário têm a sua disposição diversas salas, em diversos horários, com prazo de duas horas cada, para alugar, podendo alugar apenas um horário por dia. Portanto, assim que reservado um horário, todos os outros ficarão indisponíveis para esse mesmo usuário. Caso um outro usuário queira conferir se aquela sala está disponível, ele poderá averiguar por meio do aplicativo.
+  Visando à uma maior autonomia dos alunos no processo de reserva de salas de estudos no Inteli, que muitas das vezes tem que ser realizado pessoalmente direto com a secretaria, que a Aplicação Web foi desenvolvida, levando em conta algumas limitações e funcionalidades: cada usuário têm a sua disposição diversas salas, em diversos horários, com prazo de duas horas cada, para alugar, podendo alugar apenas um horário por dia. Portanto, assim que reservado um horário, todos os outros ficarão indisponíveis para esse mesmo usuário. Caso um outro usuário queira conferir se aquela sala está disponível, ele poderá averiguar por meio do aplicativo.
 
 ---
 
@@ -24,7 +24,8 @@ Visando à uma maior autonomia dos alunos no processo de reserva de salas de est
 
 ### 2.1. Personas 
 
-A seguir é adicionado as personas do projeto, o primeiro deles sendo um aluno do Inteli que usará o sistema.
+  Persona é uma representação fictícia, porém descrita como uma pessoa real, de um usuário do produto final. 
+  A seguir é adicionado as personas do projeto, o primeiro deles sendo um aluno do Inteli que usará o sistema.
 
 <div align="center">
 <sub> Persona 1 - João </sub>
@@ -39,6 +40,7 @@ A seguir é adicionado as personas do projeto, o primeiro deles sendo um aluno d
 
 ### 2.2. User Stories 
 
+User Stories são funcionalidades de um produto do ponto de vista das personas/usuários do projeto.
 A seguir é adicionada as User Stories referente as personas.
 
 <div align="center">
