@@ -1,10 +1,8 @@
 # Web Application Document - Projeto Individual - Módulo 2 - Inteli
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final._**
-
 ## Nome do Projeto
 
-#### Autor do projeto
+#### Rafael Gomes Ferreira
 
 ## Sumário
 
@@ -16,22 +14,20 @@
 
 <br>
 
-## <a name="c1"></a>1. Introdução (Semana 01)
+## <a name="c1"></a>1. Introdução 
 
-*Preencha com até 300 palavras – sem necessidade de fonte.*
-*Descreva brevemente o sistema que você irá desenvolver.*
+Visando à uma maior autonomia dos alunos no processo de reserva de salas de estudos no Inteli, que muitas das vezes tem que ser realizado pessoalmente direto com a secretaria, que a Aplicação Web foi desenvolvida, levando em conta algumas limitações e funcionalidades: cada usuário têm a sua disposição diversas salas, em diversos horários, com prazo de duas horas cada, para alugar, podendo alugar apenas um horário por dia. Portanto, assim que reservado um horário, todos os outros ficarão indisponíveis para esse mesmo usuário. Caso um outro usuário queira conferir se aquela sala está disponível, ele poderá averiguar por meio do aplicativo.
 
 ---
 
 ## <a name="c2"></a>2. Visão Geral da Aplicação Web
 
-### 2.1. Personas (Semana 01)
+### 2.1. Personas 
 
-*Posicione aqui sua(s) Persona(s) em forma de texto markdown com imagens, ou como imagem de template preenchido. Atualize esta seção ao longo do módulo se necessário.*
 
-### 2.2. User Stories (Semana 01)
 
-*Posicione aqui a lista de User Stories levantadas para o projeto. Siga o template de User Stories e utilize a referência USXX para numeração (US01, US02, US03, ...). Indique todas as User Stories mapeadas, mesmo aquelas que não forem implementadas ao longo do projeto. Não se esqueça de explicar o INVEST de 1 User Storie prioritária.*
+### 2.2. User Stories 
+
 
 ---
 
