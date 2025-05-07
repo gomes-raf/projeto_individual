@@ -1,0 +1,28 @@
+{
+  "name": "projeto_individual",
+  "version": "1.0.0",
+  "description": "Sistema de reserva de salas para agendamentos.",
+  "main": "jest.config.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomes-raf/projeto_individual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gomes-raf/projeto_individual/issues"
+  },
+  "homepage": "https://github.com/gomes-raf/projeto_individual#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
