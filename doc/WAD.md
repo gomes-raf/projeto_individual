@@ -77,11 +77,76 @@ A seguir é adicionada as User Stories referente as personas.
 
 ## <a name="c3"></a>3. Projeto da Aplicação Web
 
-### 3.1. Modelagem do banco de dados  (Semana 3)
+### 3.1. Modelagem do banco de dados
 
-*Posicione aqui os diagramas de modelos relacionais do seu banco de dados, apresentando todos os esquemas de tabelas e suas relações. Utilize texto para complementar suas explicações, se necessário.*
+Foi implementado um modelo inicial do banco de dados e suas relações. Inicialmente o banco foi modelado com a linguagem DBML no site "dbdiagram.io", como consta a imagem a seguir.
 
-*Posicione também o modelo físico com o Schema do BD (arquivo .sql)*
+<div align="center">
+<br>
+<br>
+<img src="../assets/modelo-banco.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+Posteriormente, para facilitar que no futuro a tabela seja de fato criada a partir da linguagem SQL, a sua modelagem já foi passada para a linguagem correta:
+
+```SQL
+CREATE TABLE usuarios (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(255),
+  email VARCHAR(255),
+  senha VARCHAR(255),
+  tipo_de_acesso VARCHAR(50)
+);
+
+CREATE TABLE salas (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(100)
+);
+
+CREATE TABLE agendamentos (
+  id SERIAL PRIMARY KEY,
+  id_usuario INTEGER,
+  id_sala INTEGER,
+  tempo INTEGER,
+
+  FOREIGN KEY (id_usuario) REFERENCES usuarios(id),
+  FOREIGN KEY (id_sala) REFERENCES salas(id)
+);
+```
+Anteriormente, em DBML:
+
+``` SQL
+Table usuarios {
+  id integer 
+  nome varchar
+  email varchar
+  senha varchar
+  tipo_de_acesso varchar
+}
+
+Table agendamentos {
+  id integer [primary key]
+  id_usuario integer
+  id_sala integer
+  nome_usuario varchar
+  nome_sala varchar
+  tempo integer
+}
+
+Table salas {
+  id integer [primary key]
+  nome varchar
+}
+
+Ref: usuarios.id > agendamentos.id_usuario
+Ref: usuarios.nome > agendamentos.nome_usuario
+Ref: salas.id > agendamentos.id_sala
+Ref: salas.nome > agendamentos.nome_sala
+```
 
 ### 3.1.1 BD e Models (Semana 5)
 *Descreva aqui os Models implementados no sistema web*
