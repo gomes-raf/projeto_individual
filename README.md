@@ -4,7 +4,7 @@ Um sistema para reserva de salas desenvolvido na linguagem Javascript, CSS e HTM
 
 ## :file_folder: Estrutura de Pastas
 ```text
-gerenciador-de-tarefas/
+projeto_individual/
 ├── assets/              # Arquivos estáticos como imagens, CSS, JS
 ├── config/              # Configurações da aplicação
 ├── controllers/         # Controladores da aplicação
