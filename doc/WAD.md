@@ -162,9 +162,23 @@ Ref: salas.nome > agendamentos.nome_sala
   
 *Adicione as setas e explicações sobre como os dados fluem entre o Model, Controller e View.*
 
-### 3.3. Wireframes (Semana 03)
+### 3.3. Wireframes 
 
-*Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
+A seguir, apresenta-se os Wireframes que representam a ideia inicial do design do projeto.
+<div align="center">
+<br>
+<br>
+<img src="../assets/Wireframe.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+Acesse o [Link do Figma](https://www.figma.com/design/yznNLG2MMrru9Ev7E5U7Zc/Logo-prot%C3%B3tipo?node-id=0-1&t=28IgerpBbBKAKjTu-1)
+
+
+A primeira tela é a de login, a qual direciona para a segunda tela "suas reservas", que mostra as reservas atuais do usuário e disponibiliza um botão para ele criar novas reservas caso assim queira. Clicando em "nova reserva", o usuário é direcionado para a página de seleção de salas, na qual consta todas as salas a serem reservadas, aquelas sem horários disponíveis são mostradas como indisponíveis, se relacionando com a User Storie 2. Clicando na sala desejada, o usuário é destinado para a tela de seleção de horários, esta que também consta os horários disponíveis e indisponíveis, se relacionando com a User Storie 3. Por fim, todo esse processo se relaciona diretamente com a User Storie 1 por permitir que o usuário faça a reserva remotamente.
 
 ### 3.4. Guia de estilos (Semana 05)
 
