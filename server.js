@@ -3,16 +3,27 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('./routes');
+const methodOverride = require('method-override');
 
 const app = express();
 const port = 3000;
 
+const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Middlewares
 app.use(cors());
 app.use(bodyParser.json());
+app.use(methodOverride('_method'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Usando as rotas definidas
-app.use('/api', routes);
+app.use(routes);
+
+//Adicionar imagens
+app.use('/assets', express.static('assets'));
 
 // Rota raiz
 app.get('/', (req, res) => {

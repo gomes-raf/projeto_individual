@@ -11,7 +11,7 @@ exports.criarAgendamento = async (req, res) => {
   try {
     const result = await pool.query(query, values);
     const Agendamento = result.rows[0];
-    res.status(201).json(Agendamento);
+    res.redirect('/agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -23,7 +23,8 @@ exports.listarAgendamentos = async (req, res) => {
 
   try {
     const result = await pool.query(query);
-    res.status(200).json(result.rows);
+      res.render('agendamento/index', { agendamentos: result.rows });
+
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -35,7 +36,7 @@ exports.editarAgendamento = async (req, res) => {
   const { id_usuario, id_sala, tempo} = req.body;
 
   const query = `
-    UPDATE agendamentos SET id_usuario = $1, id_sala = $2, temoi = $3, updated_at = CURRENT_TIMESTAMP
+    UPDATE agendamentos SET id_usuario = $1, id_sala = $2, tempo = $3, updated_at = CURRENT_TIMESTAMP
     WHERE id = $4 RETURNING *`;
   const values = [id_usuario, id_sala, tempo, id];
 
@@ -62,7 +63,7 @@ exports.excluirAgendamento = async (req, res) => {
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
-    res.status(200).json({ message: 'Agendamento excluído com sucesso' });
+    res.redirect('/agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamentos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    form { margin-top: 20px; }
+    input, button { padding: 8px; margin: 4px 0; width: 100%; max-width: 300px; }
+  </style>
+</head>
+<body>
+
+  <h1> Reserva+ </h1>
+  <h2>Seus Agendamentos</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>ID Usuário</th>
+        <th>ID Sala</th>
+        <th>Tempo</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (agendamentos.length > 0) { %>
+        <% agendamentos.forEach(a => { %>
+          <tr>
+            <td><%= a.id %></td>
+            <td><%= a.id_usuario %></td>
+            <td><%= a.id_sala %></td>
+            <td><%= a.tempo %></td>
+            <td>
+              <form method="POST" action="/agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
+                <button type="submit">Excluir</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      <% } else { %>
+        <tr>
+          <td colspan="5">Nenhum agendamento encontrado.</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+
+  <h3>Criar Novo Agendamento</h3>
+  <form method="POST" action="/agendamentos">
+    <input type="text" name="id" placeholder="ID" required />
+    <input type="text" name="id_usuario" placeholder="ID Usuário" required />
+    <input type="text" name="id_sala" placeholder="ID Sala" required />
+    <input type="text" name="tempo" placeholder="Tempo" required />
+    <button type="submit">Criar Agendamento</button>
+  </form>
+
+</body>
+</html>
