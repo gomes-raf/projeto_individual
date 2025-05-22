@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const routes = require('./routes');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 const app = express();
 const port = 3000;
@@ -18,6 +19,12 @@ app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(session({
+  secret: 'vaiCorinthians',
+  resave: false,
+  saveUninitialized: false
+}));
 
 // Usando as rotas definidas
 app.use(routes);

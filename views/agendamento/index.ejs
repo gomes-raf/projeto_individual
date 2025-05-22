@@ -20,10 +20,9 @@
   <table>
     <thead>
       <tr>
-        <th>ID</th>
         <th>ID Usuário</th>
         <th>ID Sala</th>
-        <th>Tempo</th>
+        <th>Tempo(h)</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -31,13 +30,18 @@
       <% if (agendamentos.length > 0) { %>
         <% agendamentos.forEach(a => { %>
           <tr>
-            <td><%= a.id %></td>
             <td><%= a.id_usuario %></td>
             <td><%= a.id_sala %></td>
             <td><%= a.tempo %></td>
             <td>
               <form method="POST" action="/agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
                 <button type="submit">Excluir</button>
+              </form>
+              <form method="POST" action="/agendamentos/<%= a.id %>?_method=PUT" style="display:inline;">     
+          <input type="text" name="id_usuario" placeholder="ID Usuário" required />
+          <input type="text" name="id_sala" placeholder="ID Sala" required />
+          <input type="text" name="tempo" placeholder="Tempo" required />
+          <button type="submit">Editar</button>
               </form>
             </td>
           </tr>
@@ -52,7 +56,6 @@
 
   <h3>Criar Novo Agendamento</h3>
   <form method="POST" action="/agendamentos">
-    <input type="text" name="id" placeholder="ID" required />
     <input type="text" name="id_usuario" placeholder="ID Usuário" required />
     <input type="text" name="id_sala" placeholder="ID Sala" required />
     <input type="text" name="tempo" placeholder="Tempo" required />

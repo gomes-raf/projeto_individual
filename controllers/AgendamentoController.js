@@ -5,8 +5,8 @@ const pool = require('../config/database');
 exports.criarAgendamento = async (req, res) => {
   const { id, id_usuario, id_sala, tempo } = req.body;
 
-  const query = 'INSERT INTO agendamentos (id, id_usuario, id_sala, tempo) VALUES ($1, $2, $3, $4) RETURNING *';
-  const values = [id, id_usuario, id_sala, tempo];
+  const query = 'INSERT INTO agendamentos (id_usuario, id_sala, tempo) VALUES ($1, $2, $3) RETURNING *';
+  const values = [id_usuario, id_sala, tempo];
 
   try {
     const result = await pool.query(query, values);
@@ -36,7 +36,7 @@ exports.editarAgendamento = async (req, res) => {
   const { id_usuario, id_sala, tempo} = req.body;
 
   const query = `
-    UPDATE agendamentos SET id_usuario = $1, id_sala = $2, tempo = $3, updated_at = CURRENT_TIMESTAMP
+    UPDATE agendamentos SET id_usuario = $1, id_sala = $2, tempo = $3 
     WHERE id = $4 RETURNING *`;
   const values = [id_usuario, id_sala, tempo, id];
 
@@ -45,7 +45,7 @@ exports.editarAgendamento = async (req, res) => {
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
-    res.status(200).json(result.rows[0]);
+    res.redirect('/agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

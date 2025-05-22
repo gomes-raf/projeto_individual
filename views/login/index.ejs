@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Agendamentos</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    form { margin-top: 20px; }
+    input, button { padding: 8px; margin: 4px 0; width: 100%; max-width: 300px; }
+  </style>
+</head>
+<body>
+
+  <h1> Reserva+ </h1>
+  <h2>Faça seu login</h2>
+<form method="POST" action="/login">
+  <input type="text" name="email" placeholder="Email" required />
+  <input type="password" name="senha" placeholder="Senha" required />
+  <button type="submit">Login</button>
+</form>
+
+ <h3> Ainda não possui login? </h3>
+ <form method="GET" action="/cadastrar">
+  <button type="submit">Cadastre-se</button>
+ </form>
+
+</body>
+</html>
