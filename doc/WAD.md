@@ -148,19 +148,24 @@ Ref: salas.id > agendamentos.id_sala
 Ref: salas.nome > agendamentos.nome_sala
 ```
 
-### 3.1.1 BD e Models (Semana 5)
-*Descreva aqui os Models implementados no sistema web*
+### 3.1.1 BD e Models 
+O model é responsável por conectar diretamente com o banco de dados e mandar suas requisições por meio de comandos. O sistema web apresenta apenas um Model pois todos outros comandos SQL já estão embutidos diretamente dentro de seus respectivos Controllers. O Model "models/cadastrar.js" tem como funcionalidade adicionar dentro do banco de dados, por meio do comando "INSERT INTO usuarios (nome, email, senha) VALUES ($1, $2, $3)", as informações inseridas pelo usuário.
 
-### 3.2. Arquitetura (Semana 5)
+### 3.2. Arquitetura
 
-*Posicione aqui o diagrama de arquitetura da sua solução de aplicação web. Atualize sempre que necessário.*
+Um diagrama de arquitetura é uma representação visual do funcionamento de um sistema, este que demonstra através de setas como as partes que o formam se comunicam e se relacionam.
 
-**Instruções para criação do diagrama de arquitetura**  
-- **Model**: A camada que lida com a lógica de negócios e interage com o banco de dados.
-- **View**: A camada responsável pela interface de usuário.
-- **Controller**: A camada que recebe as requisições, processa as ações e atualiza o modelo e a visualização.
-  
-*Adicione as setas e explicações sobre como os dados fluem entre o Model, Controller e View.*
+<div align="center">
+<br>
+<br>
+<img src="../assets/diagrama.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+Acesse o [Link do Figma](https://www.figma.com/design/CLjntr6GCi2InjVNrOtnLw/Untitled?node-id=3-81&t=mjS7u7leH8oHZSMa-1)
 
 ### 3.3. Wireframes 
 
@@ -189,9 +194,17 @@ A primeira tela é a de login, a qual direciona para a segunda tela "suas reserv
 
 *Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
 
-### 3.6. WebAPI e endpoints (Semana 05)
+### 3.6. WebAPI e endpoints 
 
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
+Endpoints são os caminhos finais que permitem a confecção do CRUD (Create, Read, Update e Delete) das funcionalidade dos projeto.
+O projeto apresenta os seguinte Endpoints:
+- **GET /agendamentos:** lista os agendamentos do usuário;
+- **GET /cadastrar:** leva o usuário até a página de cadastro;
+- **POST /agendamentos:** cria um novo agendamento;
+- **POST /agendamentos:id?_method=PUT:** edita um agendamento;
+- **POST /agendamentos:id?_method=DELETE:** deleta um agendamento;
+- **POST /cadastrar:** cria um novo cadastro;
+- **POST /login:** efetua o login do usuario cadastrado.
 
 ### 3.7 Interface e Navegação (Semana 07)
 
