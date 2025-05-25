@@ -185,14 +185,39 @@ Acesse o [Link do Figma](https://www.figma.com/design/yznNLG2MMrru9Ev7E5U7Zc/Log
 
 A primeira tela é a de login, a qual direciona para a segunda tela "suas reservas", que mostra as reservas atuais do usuário e disponibiliza um botão para ele criar novas reservas caso assim queira. Clicando em "nova reserva", o usuário é direcionado para a página de seleção de salas, na qual consta todas as salas a serem reservadas, aquelas sem horários disponíveis são mostradas como indisponíveis, se relacionando com a User Storie 2. Clicando na sala desejada, o usuário é destinado para a tela de seleção de horários, esta que também consta os horários disponíveis e indisponíveis, se relacionando com a User Storie 3. Por fim, todo esse processo se relaciona diretamente com a User Storie 1 por permitir que o usuário faça a reserva remotamente.
 
-### 3.4. Guia de estilos (Semana 05)
+### 3.4. Guia de estilos 
 
-*Descreva aqui orientações gerais para o leitor sobre como utilizar os componentes do guia de estilos de sua solução.*
+Um Guia de Estilos é um padrão definido para a produção de um Protótipo de Alta Fidelidade, contendo informações acerca das cores a serem usadas, tipografia, assets, etc.
 
+<div align="center">
+<br>
+<br>
+<img src="../assets/Guia de estilo.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+ 
+ Acesse o [Link do Figma](https://www.figma.com/design/yznNLG2MMrru9Ev7E5U7Zc/Logo-prot%C3%B3tipo?node-id=0-1&t=28IgerpBbBKAKjTu-1)
 
-### 3.5. Protótipo de alta fidelidade (Semana 05)
+### 3.5. Protótipo de alta fidelidade
 
-*Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
+Um protótipo de Alta Fidelidade é uma representação, de forma mais fiel possível, do produto final, buscando exibir as cores, tipografias e padrões que serão replicados na versão final.
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/Prototipo AF.png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+Algumas informações disponíveis na tela foram transferidas para outro lugar ou removidos: tudo por pura escolha estética. Algumas informações que foram mudadas: logo agora posicionada no canto superior esquerdo nas últimas três telas, caixa de login e cadastro que agora vão até o topo da imagem, botão de voltar tudo na última tela.
+
+Acesse o [Link do Figma](https://www.figma.com/design/yznNLG2MMrru9Ev7E5U7Zc/Logo-prot%C3%B3tipo?node-id=0-1&t=28IgerpBbBKAKjTu-1)
 
 ### 3.6. WebAPI e endpoints 
 
