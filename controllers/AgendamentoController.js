@@ -3,7 +3,7 @@ const pool = require('../config/database');
 
 // Criar uma nova Agendamento
 exports.criarAgendamento = async (req, res) => {
-  const { id, id_usuario, id_sala, tempo } = req.body;
+  const { id_usuario, id_sala, tempo } = req.body;
 
   const query = 'INSERT INTO agendamentos (id_usuario, id_sala, tempo) VALUES ($1, $2, $3) RETURNING *';
   const values = [id_usuario, id_sala, tempo];
@@ -19,11 +19,19 @@ exports.criarAgendamento = async (req, res) => {
 
 // Listar todas as agendamentos
 exports.listarAgendamentos = async (req, res) => {
-  const query = 'SELECT * FROM agendamentos';
-
   try {
-    const result = await pool.query(query);
-      res.render('agendamento/index', { agendamentos: result.rows });
+    // Obter o id do usuário da sessão
+    const loginId = req.session.userId;
+
+    const query = `
+    SELECT * FROM agendamentos
+    JOIN usuarios ON agendamentos.id_usuario = usuarios.id
+    JOIN salas ON agendamentos.id_sala = salas.id
+    WHERE agendamentos.id_usuario = $1
+    `;
+
+    const result = await pool.query(query, [loginId]);
+    res.render('agendamento/index', { agendamentos: result.rows });
 
   } catch (err) {
     res.status(500).json({ error: err.message });
