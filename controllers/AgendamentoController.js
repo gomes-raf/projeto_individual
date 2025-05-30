@@ -24,7 +24,7 @@ exports.listarAgendamentos = async (req, res) => {
     const loginId = req.session.userId;
 
     const query = `
-    SELECT * FROM agendamentos
+    SELECT agendamentos.id, agendamentos.id_usuario, agendamentos.id_sala, agendamentos.tempo, usuarios.nome AS nome_usuario, salas.nome AS nome_sala FROM agendamentos
     JOIN usuarios ON agendamentos.id_usuario = usuarios.id
     JOIN salas ON agendamentos.id_sala = salas.id
     WHERE agendamentos.id_usuario = $1

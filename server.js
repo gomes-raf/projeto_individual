@@ -37,6 +37,7 @@ app.get('/', (req, res) => {
     res.send('Página inicial!');
 });
 
-app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () =>
+  console.log(`Servidor rodando em http://localhost:${PORT}`) // Output remains in Portuguese
+);
