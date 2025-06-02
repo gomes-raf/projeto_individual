@@ -29,7 +29,10 @@ app.use(session({
 // Usando as rotas definidas
 app.use(routes);
 
-//Adicionar imagens
+// Configurar para servir arquivos estáticos da pasta views
+app.use(express.static(path.join(__dirname, 'views')));
+
+// Configuração adicional para servir arquivos estáticos de assets
 app.use('/assets', express.static('assets'));
 
 // Rota raiz

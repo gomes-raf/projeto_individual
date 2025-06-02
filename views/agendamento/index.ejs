@@ -9,20 +9,20 @@
     th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     th { background-color: #f2f2f2; }
     form { margin-top: 20px; }
-    input, button { padding: 8px; margin: 4px 0; width: 100%; max-width: 300px; }
+    input, button { padding: 8px; margin: 4px 0; width: 50%; max-width: 300px; }
   </style>
 </head>
 <body>
 
-  <h1> Reserva+ </h1>
-  <h2>Seus Agendamentos</h2>
+  <h1> R+ </h1>
+  <h1>Suas Reservas</h1>
 
   <table>
     <thead>
       <tr>
-        <th>ID Usuário</th>
-        <th>ID Sala</th>
-        <th>Tempo(h)</th>
+        <th>Usuário</th>
+        <th>Sala</th>
+        <th>Horário</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -30,18 +30,12 @@
       <% if (agendamentos.length > 0) { %>
         <% agendamentos.forEach(a => { %>
           <tr>
-            <td><%= a.id_usuario %></td>
-            <td><%= a.id_sala %></td>
+            <td><%= a.nome_usuario %></td>
+            <td><%= a.nome_sala %></td>
             <td><%= a.tempo %></td>
             <td>
-              <form method="POST" action="/agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
+              <form method="POST" action="/seus_agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
                 <button type="submit">Excluir</button>
-              </form>
-              <form method="POST" action="/agendamentos/<%= a.id %>?_method=PUT" style="display:inline;">     
-          <input type="text" name="id_usuario" placeholder="ID Usuário" required />
-          <input type="text" name="id_sala" placeholder="ID Sala" required />
-          <input type="text" name="tempo" placeholder="Tempo" required />
-          <button type="submit">Editar</button>
               </form>
             </td>
           </tr>
@@ -54,12 +48,8 @@
     </tbody>
   </table>
 
-  <h3>Criar Novo Agendamento</h3>
-  <form method="POST" action="/agendamentos">
-    <input type="text" name="id_usuario" placeholder="ID Usuário" required />
-    <input type="text" name="id_sala" placeholder="ID Sala" required />
-    <input type="text" name="tempo" placeholder="Tempo" required />
-    <button type="submit">Criar Agendamento</button>
+  <form method="GET" action="/selecionar_sala">
+    <button type="submit">+</button>
   </form>
 
 </body>

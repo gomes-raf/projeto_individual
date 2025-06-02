@@ -11,7 +11,7 @@ exports.criarUser = async (req, res) => {
   try {
     const result = await pool.query(query, values);
     const Login = result.rows[0];
-    res.redirect('/agendamentos');
+    res.redirect('/seus_agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -29,7 +29,7 @@ exports.loginUser = async (req, res) => {
 
     if (user) {
       req.session.userId = user.id;
-      res.redirect('/agendamentos');
+      res.redirect('/seus_agendamentos');
     } else {
       res.send('Email ou senha inválidos.');
     }

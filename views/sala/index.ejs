@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Sala</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <h1>Selecione a <span class="sala"> sala </span></h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Salas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (salas.length > 0) { %>
+                <% salas.forEach(s => { %>
+                    <tr>
+                        <td>
+                            <form method="POST" action="/selecionar_sala">
+                                <input type="hidden" name="id" value="<%= s.id %>">
+                                <button type="submit"> 
+                                    <%= s.nome %>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="2">Nenhuma sala encontrada.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+</body>
+</html>

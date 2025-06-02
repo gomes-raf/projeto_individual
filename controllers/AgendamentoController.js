@@ -11,7 +11,7 @@ exports.criarAgendamento = async (req, res) => {
   try {
     const result = await pool.query(query, values);
     const Agendamento = result.rows[0];
-    res.redirect('/agendamentos');
+    res.redirect('/seus_agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -53,7 +53,7 @@ exports.editarAgendamento = async (req, res) => {
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
-    res.redirect('/agendamentos');
+    res.redirect('/seus_agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -71,7 +71,7 @@ exports.excluirAgendamento = async (req, res) => {
     if (result.rows.length === 0) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
-    res.redirect('/agendamentos');
+    res.redirect('/seus_agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
