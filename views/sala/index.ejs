@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+    <div class="retangulo"></div>
+    <img src="/assets/R+.png" alt="Logo" width="70px" class="logo">
     <h1>Selecione a <span class="sala"> sala </span></h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Salas</th>
-            </tr>
-        </thead>
+    <div class="grid-salas">
+       
         <tbody>
             <% if (salas.length > 0) { %>
                 <% salas.forEach(s => { %>
@@ -22,7 +20,7 @@
                         <td>
                             <form method="POST" action="/selecionar_sala">
                                 <input type="hidden" name="id" value="<%= s.id %>">
-                                <button type="submit"> 
+                                <button type="submit" class="botao"> 
                                     <%= s.nome %>
                                 </button>
                             </form>
@@ -35,7 +33,7 @@
                 </tr>
             <% } %>
         </tbody>
-    </table>
+    </div>
 
 </body>
 </html>
