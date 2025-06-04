@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Cadastrar</title>
+  <link rel="stylesheet" href="/cadastroStyle.css" />
 </head>
 <body>
-  <h1>Cadastro de Usuario</h1>
 
-  <form action="/cadastrar" method="POST">
-    <input name="nome" placeholder="Nome" required>
-    <input name="email" placeholder="Email" required>
-    <input name="senha" placeholder="Senha" required>
+ <div class="retangulo"> 
+  <img src="/assets/RESERVA+.svg" alt="Logo" class="logo"  />
+
+  <form method="POST" action="/cadastrar" class="form-cadastrar">
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="text" name="email" placeholder="Email" required />
+    <input type="password" name="senha" placeholder="Senha" required />
     <button type="submit">Cadastrar</button>
   </form>
+</div>
 
   <hr>
 </body>

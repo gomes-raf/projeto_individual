@@ -2,23 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Agendamentos</title>
+  <title>Login</title>
   <link rel="stylesheet" href="/loginStyle.css" />
 </head>
 <body>
+  
+ <div class="retangulo"> 
+  <img src="/assets/RESERVA+.svg" alt="Logo" class="logo"  />
 
-  <h1> Reserva+ </h1>
-  <h2>Faça seu login</h2>
-<form method="POST" action="/login">
-  <input type="text" name="email" placeholder="Email" required />
-  <input type="password" name="senha" placeholder="Senha" required />
-  <button type="submit">Login</button>
-</form>
+  <form method="POST" action="/login" class="form-login">
+    <input type="text" name="email" placeholder="Email" required />
+    <input type="password" name="senha" placeholder="Senha" required />
+    <h3> Ainda não possui conta? <a href="/cadastrar">Cadastre-se</a></h3>
+    <button type="submit">Login</button>
+  </form>
+</div>
 
- <h3> Ainda não possui login? </h3>
- <form method="GET" action="/cadastrar">
-  <button type="submit">Cadastre-se</button>
- </form>
 
 </body>
 </html>

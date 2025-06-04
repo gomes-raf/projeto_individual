@@ -27,7 +27,7 @@ body{
 }
 
 
-.form-login input[type="text"] {
+.form-cadastrar input[name="nome"] {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -40,7 +40,7 @@ body{
     font-size: 15px;
 }
 
-.form-login input[type="password"] {
+.form-cadastrar input[name="email"] {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -53,7 +53,20 @@ body{
     font-size: 15px;
 }
 
-.form-login button[type="submit"] {
+.form-cadastrar input[type="password"] {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #2C243E;
+    font-family: 'Lalezar';
+    font-size: 15px;
+}
+
+.form-cadastrar button[type="submit"] {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -70,18 +83,7 @@ body{
     transition: background-color 0.3s;
 }
 
-.form-login button[type="submit"]:hover {
+.form-cadastrar button[type="submit"]:hover {
     background-color: #7A2020;
     cursor: pointer;
-}
-
-h3 {
-    font-family: 'Lalezar';
-    font-size: 15px;
-    color: #757575;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
 }
