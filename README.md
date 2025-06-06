@@ -27,4 +27,51 @@ projeto_individual/
 ```
 
 ## :package: Como executar localmente
-Para executar localmente, abra o projeto no VSCode e, no terminal, digite o comando "node server.js", assim o projeto já estará rodando localmente na porta 3000. Em caso de erro, certifique-se de que tenha o Node.js instalado.
+
+Passo 1: Clonar o repositório usando Git:
+
+```
+git clone https://github.com/gomes-raf/projeto_individual.git
+cd projeto_individual
+```
+
+Passo 2: Instalar as dependências
+Abra um terminal na pasta do projeto e execute:
+
+```
+npm install
+```
+
+Este comando instalará todas as dependências necessárias listadas no arquivo package.json.
+
+Passo 3: Configurar o banco de dados
+Crie um arquivo .env na raiz do projeto com as seguintes informações:
+
+```
+DB_USER=
+DB_HOST=
+DB_DATABASE=
+DB_PASSWORD=
+DB_PORT=
+DB_SSL=
+```
+
+Passo 4: Inicializar o banco de dados
+Execute o script de inicialização do banco de dados:
+
+```
+npm run init-db
+```
+
+Este comando executará o script SQL que criará as tabelas necessárias no banco de dados.
+
+Passo 5: Iniciar o servidor
+
+```
+node server.js
+```
+
+O servidor será iniciado na porta 3000. Você verá uma mensagem no terminal: Servidor rodando em http://localhost:3000
+
+Passo 6: Acessar o sistema
+Basta clicar em http://localhost:3000 que acessará o projeto.
