@@ -38,6 +38,7 @@ body{
     border: 1px solid #2C243E;
     font-family: 'Lalezar';
     font-size: 15px;
+    padding-left: 5px;
 }
 
 .form-login input[type="password"] {
@@ -51,6 +52,7 @@ body{
     border: 1px solid #2C243E;
     font-family: 'Lalezar';
     font-size: 15px;
+    padding-left: 5px;
 }
 
 .form-login button[type="submit"] {

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+
+body {
+    background: linear-gradient(90deg, #F3F3F3, #DFDFDF)
+}
+
+/* Container principal de agendamentos */
+.agendamentos-container {
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os agendamentos */
+}
+
+/* Cada linha de agendamento */
+.agendamento-row {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #2C243E;
+}
+
+/* Primeira div (quadrado colorido) */
+.quadrado {
+    background-color: #2C243E;
+    border-radius: 20px 0px 0px 20px;
+    width: 200px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+/* Nome da sala dentro do quadrado */
+.nome_sala {
+    font-family: 'Lalezar';
+    font-size: 100px;
+    color: #f3f3f3;
+    text-align: center;
+}
+
+/* Container para nome do usuário e tempo */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 15px;
+    height: 100%;
+}
+
+/* Nome do usuário */
+.nome_usuario {
+    font-family: 'Jomhuria';
+    font-size: 30px;
+    color: #383838;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Tempo do agendamento */
+.tempo {
+    font-family: 'Jomhuria';
+    font-size: 30px;
+    color: #383838;
+    text-align: center;
+}
+
+/* Div de ações (botão de excluir) */
+.acoes {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Botão de excluir */
+.acoes button {
+    background-color: #ff4545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.acoes button:hover {
+    background-color: #7A2020;
+}
+
+h1 { 
+    font-size: 66px;
+    color: #f3f3f3;
+    text-align: center;
+    font-family: 'Lalezar';
+    margin-top: 0px;
+}
+
+
+.reservas {
+    color: #ff4545
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+.retangulo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #2C243E;
+    width: 100%;
+    height: 110px;
+    background-color: #2C243E;
+    z-index: -1;
+}
+
+.botao button[type="submit"] {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 40px;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ff4545;
+    color: #f3f3f3;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding-top: 4px;
+}
+
+.botao button[type="submit"]:hover {
+    background-color: #7A2020;
+    cursor: pointer;
+}
+
+.agendamento-vazio {
+    text-align: center;
+    font-family: 'Jomhuria';
+    font-size: 30px;
+    color: #383838;
+    margin-top: 30px;
+}
+
+/* Estilos para o formulário de criação de agendamento */
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #2C243E;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Jomhuria';
+  font-size: 24px;
+  color: #383838;
+  margin-bottom: 5px;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #2C243E;
+  font-family: 'Lalezar';
+  font-size: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-cancelar, .btn-agendar {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Jomhuria';
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-cancelar {
+  background-color: #f3f3f3;
+  color: #383838;
+  border: 1px solid #2C243E;
+}
+
+.btn-agendar {
+  background-color: #ff4545;
+  color: #f3f3f3;
+  border: none;
+}
+
+.btn-cancelar:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-agendar:hover {
+  background-color: #7A2020;
+}

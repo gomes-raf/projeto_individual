@@ -5,6 +5,7 @@ const AgendamentoController = require('../controllers/AgendamentoController');
 const HomeController = require('../controllers/HomeController');
 const CadastrarController = require('../controllers/CadastrarController');
 const salaController = require('../controllers/salaController');
+const horarioController = require('../controllers/horarioController');
 
 function verificarLogin(req, res, next) {
   if (req.session.userId) {
@@ -44,5 +45,10 @@ router.get('/selecionar_sala', salaController.selecionarSala);
 router.post('/selecionar_sala', salaController.selecionarSala);
 router.get('/selecionar_salas', salaController.listarSalas);
 router.post('/selecionar_salas', salaController.listarSalas);
+
+router.get('/selecionar_horario', horarioController.selecionarHorario);
+router.post('/selecionar_horario', horarioController.selecionarHorario);
+router.get('/selecionar_horarios', horarioController.listarHorarios);
+router.post('/selecionar_horarios', horarioController.listarHorarios);
 
 module.exports = router;

@@ -3,53 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Agendamentos</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    table { border-collapse: collapse; width: 100%; margin-bottom: 30px; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background-color: #f2f2f2; }
-    form { margin-top: 20px; }
-    input, button { padding: 8px; margin: 4px 0; width: 50%; max-width: 300px; }
-  </style>
+  <link rel="stylesheet" href="/agendamentoStyle.css" />
 </head>
 <body>
 
-  <h1> R+ </h1>
-  <h1>Suas Reservas</h1>
+     <div class="retangulo"></div>
+    <img src="/assets/R+.svg" alt="Logo" class="logo">
+    <h1>Suas <span class="reservas"> Reservas </span></h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Usuário</th>
-        <th>Sala</th>
-        <th>Horário</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% if (agendamentos.length > 0) { %>
-        <% agendamentos.forEach(a => { %>
-          <tr>
-            <td><%= a.nome_usuario %></td>
-            <td><%= a.nome_sala %></td>
-            <td><%= a.tempo %></td>
-            <td>
-              <form method="POST" action="/seus_agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
-                <button type="submit">Excluir</button>
-              </form>
-            </td>
-          </tr>
-        <% }) %>
-      <% } else { %>
-        <tr>
-          <td colspan="5">Nenhum agendamento encontrado.</td>
-        </tr>
-      <% } %>
-    </tbody>
-  </table>
+  <div class="agendamentos-container">
+    <% if (agendamentos.length > 0) { %>
+      <% agendamentos.forEach(a => { %>
+        <div class="agendamento-row">
+          <div class="quadrado">
+            <span class="nome_sala"><%= a.nome_sala %></span>
+          </div>
+          <div class="info-container">
+            <div class="nome_usuario"><%= a.nome_usuario %></div>
+            <div class="tempo"><%= a.tempo %></div>
+          </div>
+          <div class="acoes">
+            <form method="POST" action="/seus_agendamentos/<%= a.id %>?_method=DELETE" style="display:inline;">
+              <button type="submit">x</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    <% } else { %>
+      <div class="agendamento-vazio">
+        <p>Você ainda não possui agendamentos.</p>
+      </div>
+    <% } %>
+  </div>
 
-  <form method="GET" action="/selecionar_sala">
-    <button type="submit">+</button>
+  <form method="GET" action="/selecionar_sala" class="botao">
+    
+    <button type="submit"> <img src="/assets/mais.svg" class="mais" width="60%" height="60%"/> </button>
   </form>
 
 </body>

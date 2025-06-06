@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Horário</title>
+    <link rel="stylesheet" href="/horarioStyle.css" />
+</head>
+<body>
+    <div class="retangulo"></div>
+    <img src="/assets/R+.svg" alt="Logo" class="logo">
+    <h1>Selecione o <span class="horario"> horário </span></h1>
+
+    <form id="formHorario" method="POST" action="/selecionar_horario">
+        <div class="grid-horarios">
+            <% if (horarios && horarios.length > 0) { %>
+                <% horarios.forEach(h => { %>
+                    <div class="horario-item">
+                        <label>
+                            <input 
+                                type="radio" 
+                                name="id" 
+                                value="<%= h.id %>" 
+                                style="display: none;" 
+                                <%= h.disponivel ? '' : 'disabled' %>
+                            >
+                            <div 
+                                class="botao <%= h.disponivel ? '' : 'indisponivel' %>" 
+                                onclick="<%= h.disponivel ? 'selecionarHorario(this)' : '' %>" 
+                                title="<%= h.disponivel ? '' : 'Horário já reservado' %>"
+                            > 
+                                <%= h.tempo %>
+                            </div>
+                        </label>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="horario-vazio">
+                    <p>Nenhum horário disponível.</p>
+                </div>
+            <% } %>
+        </div>
+
+        <button type="submit" class="botao-reservar">Reservar</button>
+    </form>
+
+    <script>
+        function selecionarHorario(elemento) {
+            document.querySelectorAll('.botao').forEach(botao => {
+                botao.classList.remove('selecionado');
+            });
+            elemento.classList.add('selecionado');
+            elemento.parentNode.querySelector('input[type="radio"]').checked = true;
+        }
+    </script>
+</body>
+</html>
