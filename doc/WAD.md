@@ -231,9 +231,63 @@ O projeto apresenta os seguinte Endpoints:
 - **POST /cadastrar:** cria um novo cadastro;
 - **POST /login:** efetua o login do usuario cadastrado.
 
-### 3.7 Interface e Navegação (Semana 07)
+### 3.7 Interface e Navegação 
 
-*Descreva e ilustre aqui o desenvolvimento do frontend do sistema web, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+Desenvolveu-se ao decorrer do projeto um total de cinco telas, sendo elas: login, cadastro, agendamentos, seleção de salas e seleção de horários.
+
+A seguir, temos todas as telas exibidas de acordo com o fluxo padrão do site:
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/tela (1).png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/tela (2).png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/tela (3).png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/tela (4).png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+<div align="center">
+<br>
+<br>
+<img src="../assets/tela (5).png" width="100%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+O desenvolvimento do sistema foi realizado tentando abrangir todas as funcionalidades propostas, como a de cadastrar um usuário, fazer login, agendar uma sala, visualizar as salas disponíveis (sendo as indisponíveis destacadas em vermelho), etc. Tudo isso foi feito de maneira que o usuário pudesse navegar de forma fácil e intuitiva entre as telas. 
 
 ---
 
