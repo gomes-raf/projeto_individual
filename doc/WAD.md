@@ -295,8 +295,9 @@ O desenvolvimento do sistema foi realizado tentando abrangir todas as funcionali
 
 ### 4.1 Demonstração do Sistema Web (Semana 8)
 
-*VIDEO: Insira o link do vídeo demonstrativo nesta seção*
-*Descreva e ilustre aqui o desenvolvimento do sistema web completo, explicando brevemente o que foi entregue em termos de código e sistema. Utilize prints de tela para ilustrar.*
+Acesse o vídeo de demonstração clicando [aqui.](https://youtu.be/jgOQ7nQpGMg?feature=shared)
+
+Ao todo foram desenvolvidos 5 models, 5 controllers e 5 views que representam as 5 telas desenvolvidas no projeto: login, cadastro, agendamentos, salas e horarios.
 
 ### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
 
