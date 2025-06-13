@@ -7,4 +7,12 @@ module.exports = {
     return db.query(query, values);
   },
 
-}
+  async findAll() {
+    try {
+      const result = await db.query('SELECT id, nome, email FROM usuarios ORDER BY nome ASC'); 
+      return result.rows;
+    } catch (err) {
+      throw err;
+    }
+  }
+};

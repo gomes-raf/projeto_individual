@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const AgendamentoController = require('../controllers/AgendamentoController');
-const HomeController = require('../controllers/HomeController');
+const loginController = require('../controllers/loginController');
 const CadastrarController = require('../controllers/CadastrarController');
 const salaController = require('../controllers/salaController');
 const horarioController = require('../controllers/horarioController');
@@ -23,14 +23,11 @@ router.get('/', (req, res) => {
   res.render('login'); // ou alguma página inicial
 });
 
-router.post('/criar-usuario', HomeController.criarUser);
-
-
 router.get('/login', (req, res) => {
   res.render('login/index'); // renderiza a tela de login
 });
 
-router.post('/login', HomeController.loginUser); // novo método que você vai criar
+router.post('/login', loginController.loginUser); // novo método que você vai criar
 
 router.get('/cadastrar', CadastrarController.index);
 router.post('/cadastrar', CadastrarController.cadastrar);

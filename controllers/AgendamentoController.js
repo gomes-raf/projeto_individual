@@ -1,56 +1,39 @@
 // controllers/AgendamentoController.js
-const pool = require('../config/database');
+const AgendamentoModel = require('../models/agendamento');
 
-// Criar uma nova Agendamento
-exports.criarAgendamento = async (req, res) => {
-  const { id_usuario, id_sala, tempo } = req.body;
-
-  const query = 'INSERT INTO agendamentos (id_usuario, id_sala, tempo) VALUES ($1, $2, $3) RETURNING *';
-  const values = [id_usuario, id_sala, tempo];
-
+// Listar todos os agendamentos do usuário logado
+exports.listarAgendamentos = async (req, res) => {
   try {
-    const result = await pool.query(query, values);
-    const Agendamento = result.rows[0];
+    const loginId = req.session.userId;
+    if (!loginId) {
+      return res.redirect('/login'); // Garante que o usuário está logado
+    }
+    const agendamentos = await AgendamentoModel.findByUserId(loginId);
+    res.render('agendamento/index', { agendamentos });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+// Criar um novo Agendamento
+exports.criarAgendamento = async (req, res) => {
+  try {
+    // Adiciona o ID do usuário da sessão ao corpo da requisição para o model
+    const dadosAgendamento = { ...req.body, id_usuario: req.session.userId };
+    await AgendamentoModel.create(dadosAgendamento);
     res.redirect('/seus_agendamentos');
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 };
 
-// Listar todas as agendamentos
-exports.listarAgendamentos = async (req, res) => {
-  try {
-    // Obter o id do usuário da sessão
-    const loginId = req.session.userId;
-
-    const query = `
-    SELECT agendamentos.id, agendamentos.id_usuario, agendamentos.id_sala, agendamentos.tempo, usuarios.nome AS nome_usuario, salas.nome AS nome_sala FROM agendamentos
-    JOIN usuarios ON agendamentos.id_usuario = usuarios.id
-    JOIN salas ON agendamentos.id_sala = salas.id
-    WHERE agendamentos.id_usuario = $1
-    `;
-
-    const result = await pool.query(query, [loginId]);
-    res.render('agendamento/index', { agendamentos: result.rows });
-
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
-// Editar uma Agendamento
+// Editar um Agendamento
 exports.editarAgendamento = async (req, res) => {
-  const { id } = req.params;
-  const { id_usuario, id_sala, tempo} = req.body;
-
-  const query = `
-    UPDATE agendamentos SET id_usuario = $1, id_sala = $2, tempo = $3 
-    WHERE id = $4 RETURNING *`;
-  const values = [id_usuario, id_sala, tempo, id];
-
   try {
-    const result = await pool.query(query, values);
-    if (result.rows.length === 0) {
+    const { id } = req.params;
+    const agendamentoAtualizado = await AgendamentoModel.update(id, req.body);
+    
+    if (!agendamentoAtualizado) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
     res.redirect('/seus_agendamentos');
@@ -59,16 +42,13 @@ exports.editarAgendamento = async (req, res) => {
   }
 };
 
-// Excluir uma Agendamento
+// Excluir um Agendamento
 exports.excluirAgendamento = async (req, res) => {
-  const { id } = req.params;
-
-  const query = 'DELETE FROM agendamentos WHERE id = $1 RETURNING *';
-  const values = [id];
-
   try {
-    const result = await pool.query(query, values);
-    if (result.rows.length === 0) {
+    const { id } = req.params;
+    const agendamentoExcluido = await AgendamentoModel.delete(id);
+
+    if (!agendamentoExcluido) {
       return res.status(404).json({ message: 'Agendamento não encontrado' });
     }
     res.redirect('/seus_agendamentos');
