@@ -27,21 +27,6 @@ exports.criarAgendamento = async (req, res) => {
   }
 };
 
-// Editar um Agendamento
-exports.editarAgendamento = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const agendamentoAtualizado = await AgendamentoModel.update(id, req.body);
-    
-    if (!agendamentoAtualizado) {
-      return res.status(404).json({ message: 'Agendamento não encontrado' });
-    }
-    res.redirect('/seus_agendamentos');
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
-
 // Excluir um Agendamento
 exports.excluirAgendamento = async (req, res) => {
   try {

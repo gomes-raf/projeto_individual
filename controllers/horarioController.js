@@ -46,6 +46,7 @@ exports.listarHorarios = async (req, res) => {
   }
 };
 
+
 exports.selecionarHorario = async (req, res) => {
   const id = req.method === 'GET' ? req.query.id : req.body.id;
   

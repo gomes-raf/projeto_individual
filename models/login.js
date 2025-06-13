@@ -2,12 +2,6 @@
 const db = require('../config/database');
 
 module.exports = {
-  /**
-   * Busca um usuário pelo email e senha.
-   * @param {string} email - O email do usuário.
-   * @param {string} senha - A senha do usuário.
-   * @returns {Promise<object|undefined>} Retorna o objeto do usuário se encontrado, caso contrário, undefined.
-   */
   async findByEmailAndPassword(email, senha) {
     const query = 'SELECT * FROM usuarios WHERE email = $1 AND senha = $2';
     const values = [email, senha];

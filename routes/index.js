@@ -35,7 +35,6 @@ router.post('/cadastrar', CadastrarController.cadastrar);
 // Rotas para o CRUD de agendamentos
 router.post('/seus_agendamentos', AgendamentoController.criarAgendamento);
 router.get('/seus_agendamentos', AgendamentoController.listarAgendamentos);
-router.put('/seus_agendamentos/:id', AgendamentoController.editarAgendamento);
 router.delete('/seus_agendamentos/:id', AgendamentoController.excluirAgendamento);
 
 router.get('/selecionar_sala', salaController.selecionarSala);

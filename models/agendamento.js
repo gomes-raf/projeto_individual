@@ -28,19 +28,6 @@ module.exports = {
     return result.rows;
   },
 
-
-  async update(id, { id_usuario, id_sala, tempo }) {
-    const query = `
-      UPDATE agendamentos 
-      SET id_usuario = $1, id_sala = $2, tempo = $3 
-      WHERE id = $4 
-      RETURNING *`;
-    const values = [id_usuario, id_sala, tempo, id];
-    const result = await db.query(query, values);
-    return result.rows[0];
-  },
-
-
   async delete(id) {
     const query = 'DELETE FROM agendamentos WHERE id = $1 RETURNING *';
     const values = [id];
