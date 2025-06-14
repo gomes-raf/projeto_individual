@@ -291,24 +291,57 @@ O desenvolvimento do sistema foi realizado tentando abrangir todas as funcionali
 
 ---
 
-## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
+## <a name="c4"></a>4. Desenvolvimento da Aplicação Web 
 
-### 4.1 Demonstração do Sistema Web (Semana 8)
-
+### 4.1 Demonstração do Sistema Web 
 Acesse o vídeo de demonstração clicando [aqui.](https://youtu.be/jgOQ7nQpGMg?feature=shared)
 
-Ao todo foram desenvolvidos 5 models, 5 controllers e 5 views que representam as 5 telas desenvolvidas no projeto: login, cadastro, agendamentos, salas e horarios.
+Ao todo foram desenvolvidos 5 models, 5 controllers e 5 views que são referentes às 5 telas desenvolvidas no projeto: login, cadastro, agendamentos, salas e horarios. A seguir, vemos a estrutura MVC implmentada:
 
-### 4.2 Conclusões e Trabalhos Futuros (Semana 8)
+<div align="center">
+<br>
+<br>
+<img src="../assets/MVC_Models.png" width="50%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
 
-*Indique pontos fortes e pontos a melhorar de maneira geral.*
-*Relacione também quaisquer outras ideias que você tenha para melhorias futuras.*
+<div align="center">
+<br>
+<br>
+<img src="../assets/MVC_Controllers.png" width="50%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
 
+<div align="center">
+<br>
+<br>
+<img src="../assets/MVC_Views.png" width="50%">
+<br>
+<sup>Fonte: Material produzido pelo autor (2025)</sup>
+<br>
+<br>
+</div>
+
+### 4.2 Conclusões e Trabalhos Futuros 
+
+O projeto apresenta uma navegação intuitiva e clara através de um design simples e amigável, apresentando um fluxo claro para a realização da principal função do sistema: a reserva de salas. Como planos futuros seriam interessantes a adição de botões para retornar para a página anterior, adição de um sistema de tempo que, ao final do dia, a reserva seja excluída automaticamente, sistema de reserva à longo prazo, adição de um visual para salas com todos horários já reservados, melhoria da disposição das salas na página de seleção de salas, dentre outras melhorias visando à melhoria do site.
 
 
 ## <a name="c5"></a>5. Referências
 
-_Incluir as principais referências de seu projeto, para que seu parceiro possa consultar caso ele se interessar em aprofundar. Um exemplo de referência de livro e de site:_<br>
+A seguir segue os sites usados como referência de base para o projeto:
+
+INTELI. Portal AdaLove. Disponível em: <https://adalove.inteli.edu.br/>. Acesso em: 14 jun. 2025.
+
+FACEBOOK. Página inicial. Disponível em: <https://www.facebook.com/?locale=pt_BR>. Acesso em: 14 jun. 2025.
+
+Ambos os casos foram usados como referência para conseguir garantir uma mistura de identidade visual com um toque de modernidade. Da Adalove tiraram-se as cores, mantendo o padrão visual do Inteli tendo em vista de que é um projeto baseado em uma demanda de alunos da faculdade: um site para conseguir agendar reservas de salas de estudo. Já do Facebook foram tirados a aparência e estética de um site moderno.
 
 ---
 ---

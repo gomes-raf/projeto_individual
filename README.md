@@ -1,6 +1,6 @@
 # Reserva+
 ## :clipboard: Sistema de reserva de salas para agendamentos.
-Um sistema para reserva de salas desenvolvido na linguagem Javascript, CSS e HTML.
+Um sistema para reserva de salas desenvolvido com as tecnologias Javascript, CSS, HTML, Node.js, Express.js, EJS, Supabase, PostgreSQL.
 
 ## :file_folder: Estrutura de Pastas
 ```text
@@ -75,3 +75,15 @@ O servidor será iniciado na porta 3000. Você verá uma mensagem no terminal: S
 
 Passo 6: Acessar o sistema
 Basta clicar em http://localhost:3000 que acessará o projeto.
+
+## :camera: Vídeo demonstração
+
+A seguir, veja um vídeo explicativo de como o sistema funciona e todas suas funcionalidades.
+
+Para ver o vídeo, [clique aqui.](https://youtu.be/jgOQ7nQpGMg?feature=shared)
+
+## :film_projector: Gif sistema
+
+Veja também esse breve gif demonstrando todo o processo de reservar dentro do projeto.
+
+<img src="./assets/Gif projeto individual.gif" width="900" alt="Demonstração do sistema">
