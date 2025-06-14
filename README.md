@@ -86,4 +86,4 @@ Para ver o vídeo, [clique aqui.](https://youtu.be/jgOQ7nQpGMg?feature=shared)
 
 Veja também esse breve gif demonstrando todo o processo de reservar dentro do projeto.
 
-<img src="./assets/Gif projeto individual.gif" width="900" alt="Demonstração do sistema">
+<img src="./assets/demonstracao-sistema.gif" width="900" alt="Demonstração do sistema">
